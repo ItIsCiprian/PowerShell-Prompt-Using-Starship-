@@ -49,46 +49,46 @@ Pro Tip: you can just run these commands if you want to open the starship.toml f
 Here's my preset -
  - This will show the correct icon when a nerd font will be enabled
 
-command_timeout = 500
-format = "$directory$git_branch$time$cmd_duration$character"
-[line_break]
-disabled = true
+>command_timeout = 500
+>format = "$directory$git_branch$time$cmd_duration$character"
+>[line_break]
+>disabled = true
 
-[character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[✗](bold red) "
+>[character]
+>success_symbol = "[➜](bold green) "
+>error_symbol = "[✗](bold red) "
 
-[cmd_duration]
-min_time = 500
-format = "took [$duration](bold yellow) "
+>[cmd_duration]
+>min_time = 500
+>format = "took [$duration](bold yellow) "
 
-[directory]
-read_only = " "
-truncation_length = 3
-truncation_symbol = "~/"
+>[directory]
+>read_only = " "
+>truncation_length = 3
+>truncation_symbol = "~/"
 
-[git_branch]
-symbol = "  "
-style = "bold #e8ec00 inverted"
-format = "on [$symbol$branch ]($style) "
+>[git_branch]
+>symbol = "  "
+>style = "bold #e8ec00 inverted"
+>format = "on [$symbol$branch ]($style) "
 
-[time]
-disabled = false
-format = '[ 🕙 $time ]($style) '
-time_format = "%I:%M:%S %p"
-utc_time_offset = "+6"
-style = "bold bg:#8a15e2"
+>[time]
+>disabled = false
+>format = '[ 🕙 $time ]($style) '
+>time_format = "%I:%M:%S %p"
+>utc_time_offset = "+6"
+>style = "bold bg:#8a15e2"
 
-[git_commit]
-disabled = true
+>[git_commit]
+>disabled = true
 
-[git_state]
-disabled = true
+>[git_state]
+>disabled = true
 
-[git_status]
-disabled = true
+>[git_status]
+>disabled = true
 
-[package]
-disabled = true
+>[package]
+>disabled = true
 
 That's pretty much it. If you face any issue with installation, feel free to drop a comment. I would be happy to help
