@@ -7,14 +7,14 @@ Along came Starship - a Rust powered, highly customizable and easy to use cross-
 Here's how I did it -
 
 1) Installing a nerd font
-We have to install and enable a nerd font in the terminal. You can choose any font from the list. I used "MesloLGS NF".
+We have to install and enable a nerd font in the terminal. You can choose any font from the list. I used ```sh "MesloLGS NF".```
 
 2) Installing starship using scoop
->scoop install starship
+scoop install starship
 
 
 If you do not have scoop installed, run the following command in your PowerShell to install it -
->iwr -useb get.scoop.sh | iex
+```sh iwr -useb get.scoop.sh | iex```
 
 Note: if you get an error you might need to change the execution policy with >Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
@@ -22,29 +22,33 @@ Note: if you get an error you might need to change the execution policy with >Se
 
 We will have to initiate starship each time a PowerShell instance starts. We can achieve this by adding the following to the end of Microsoft.PowerShell_profile.ps1:
 
->Invoke-Expression (&starship init powershell)
+```sh Invoke-Expression (&starship init powershell)```
 
 You can check the location of this file by querying the >$PROFILE variable in PowerShell. Typically the path is ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 
 4) Refreshing the PowerShell session
 Enter the following command to refresh the current PowerShell session
 
->. $profile
+```sh . $profile```
 
 Voila!!! You can see its working. Now, on to the fun part which is configuring.
 
 5) Configuration
 First from the PowerShell you can type the following command to create the .config directory and a starship.toml file for the configuration.
 
->New-Item -ItemType Directory -Force ~/.config;New-Item -ItemType file ~/.config/starship.toml;
+```sh New-Item -ItemType Directory -Force ~/.config;New-Item -ItemType file ~/.config/starship.toml;```
+
 or if you like to use git bash, you may use the following command -
->mkdir -p ~/.config && touch ~/.config/starship.toml
+
+```sh mkdir -p ~/.config && touch ~/.config/starship.toml```
+
 you will find the newly created directory and config file at the user's home directory, e.g. C:\Users<UserName>
 
 Open the file with your preferred editor and start playing with the configuration.
 
 Pro Tip: you can just run these commands if you want to open the starship.toml file with Visual Studio Code :
->cd  ~/.config;code starship.toml
+  
+```sh cd  ~/.config;code starship.toml```
 
 Here's my preset -
  - This will show the correct icon when a nerd font will be enabled
