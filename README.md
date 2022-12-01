@@ -4,14 +4,6 @@ In this case, the tool of interest was Zsh terminal. The default appearance of P
 
 Along came Starship - a Rust powered, highly customizable and easy to use cross-shell platform.
 
-Here's a before-after comparison of Starship installed PowerShell
-
-Before:
-https://res.cloudinary.com/practicaldev/image/fetch/s--177V3qne--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2k7nfylwcaeqjz2sl9er.jpg
-
-After:
-https://res.cloudinary.com/practicaldev/image/fetch/s--8UiqoNFu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kmw4mtargghi6pfptirc.jpg
-
 Here's how I did it -
 
 1) Installing a nerd font
@@ -31,16 +23,19 @@ Note: if you get an error you might need to change the execution policy with >Se
 We will have to initiate starship each time a PowerShell instance starts. We can achieve this by adding the following to the end of Microsoft.PowerShell_profile.ps1:
 
 >Invoke-Expression (&starship init powershell)
-You can check the location of this file by querying the $PROFILE variable in PowerShell. Typically the path is ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+
+You can check the location of this file by querying the >$PROFILE variable in PowerShell. Typically the path is ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 
 4) Refreshing the PowerShell session
 Enter the following command to refresh the current PowerShell session
 
 >. $profile
+
 Voila!!! You can see its working. Now, on to the fun part which is configuring.
 
 5) Configuration
 First from the PowerShell you can type the following command to create the .config directory and a starship.toml file for the configuration.
+
 >New-Item -ItemType Directory -Force ~/.config;New-Item -ItemType file ~/.config/starship.toml;
 or if you like to use git bash, you may use the following command -
 >mkdir -p ~/.config && touch ~/.config/starship.toml
